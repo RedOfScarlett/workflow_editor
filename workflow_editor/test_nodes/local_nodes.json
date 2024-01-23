@@ -1,0 +1,209 @@
+{
+    "DataUploader": {
+        "inputs": {
+            "required": {},
+            "optional": {}
+        },
+        "attributes": {
+            "required": {
+                "outputdatatype": {
+                    "type": ["PDF", "IMAGE", "DP_HTML_DATA"],
+                    "description": "Data Type to be uploaded"
+                },
+                "datafile": {
+                    "type": "DATAFILE",
+                    "description": "Data file to be uploaded"
+                }
+            },
+            "optional": {}
+        },
+        "outputs": {
+            "output_data": {
+                "type": "PDF",
+                "description": "PDF files uploaded"
+            }
+        },
+        "category": "DataSource"
+    },
+    "MusicLibrary": {
+        "inputs": {
+            "required": {
+                "input_data": {
+                    "type": "JSON",
+                    "description": "information for search music"
+                }
+            },
+            "optional": {}
+        },
+        "attributes": {
+            "required": {},
+            "optional": {}
+        },
+        "outputs": {
+            "output_data": {
+                "type": "AUDIO",
+                "description": "PDF files uploaded"
+            }
+        },
+        "category": "DataSource"
+    },
+    "JLDataCollector": {
+        "inputs": {
+            "required": {},
+            "optional": {}
+        },
+        "attributes": {
+            "required": {},
+            "optional": {}
+        },
+        "outputs": {
+            "output_data": {
+                "type": "JSON",
+                "description": "JSON data from juliang engine"
+            }
+        },
+        "category": "DataSource"
+    },
+    "Pdf2Img": {
+        "inputs": {
+            "required": {
+                "input_pdf": {
+                    "type": "PDF",
+                    "description": "PDF file to be converted to image"
+                }
+            },
+            "optional": {}
+        },
+        "attributes": {
+            "required": {},
+            "optional": {}
+        },
+        "outputs": {
+            "output_imgs": {
+                "type": "IMAGE",
+                "description": "Image files converted from PDF"
+            }
+        },
+        "category": "Function"
+    },
+    "GenStoryboard": {
+        "inputs": {
+            "required": {},
+            "optional": {}
+        },
+        "attributes": {
+            "required": {
+                "objective": {
+                    "type": "STRING",
+                    "description": "objective of the story"
+                },
+                "backstory": {
+                    "type": "STRING",
+                    "description": "backstory of the story"
+                },
+                "kl_points": {
+                    "type": "STRING",
+                    "description": "kl_points of the story"
+                }
+            },
+            "optional": {}
+        },
+        "outputs": {
+            "output_data": {
+                "type": "AUDIO",
+                "description": "PDF files uploaded"
+            }
+        },
+        "category": "Function"
+    },
+    "DataminingDianping": {
+        "inputs": {
+            "required": {
+                "input_dp_html_data": {
+                    "type": "DP_HTML_DATA",
+                    "description": "Dianping HTML data zip file"
+                },
+                "input_dp_img_data": {
+                    "type": "IMAGE",
+                    "description": "Dianping image data zip file"
+                }
+            },
+            "optional": {}
+        },
+        "attributes": {
+            "required": {},
+            "optional": {}
+        },
+        "outputs": {
+            "output_dish_img": {
+                "type": "IMAGE",
+                "description": "Dish image files"
+            },
+            "output_shop_img": {
+                "type": "IMAGE",
+                "description": "Shop image files"
+            },
+            "output_shop_info": {
+                "type": "JSON",
+                "description": "shop information"
+            }
+        },
+        "category": "Function"
+    },
+    "ImageCaptioning": {
+        "inputs": {
+            "required": {
+                "input_img": {
+                    "type": "IMAGE",
+                    "description": "Image file to be captioned"
+                }
+            },
+            "optional": {}
+        },
+        "attributes": {
+            "required": {},
+            "optional": {}
+        },
+        "outputs": {
+            "output_caption": {
+                "type": "JSON",
+                "description": "Caption of the images"
+            }
+        },
+        "category": "Function"
+    },
+    "DPDatavdbBuilder": {
+        "inputs": {
+            "required": {
+                "input_shop_info": {
+                    "type": "JSON",
+                    "description": "shop information"
+                },
+                "input_shop_img_info": {
+                    "type": "JSON",
+                    "description": "Shop image files information"
+                }
+            },
+            "optional": {}
+        },
+        "attributes": {
+            "required": {},
+            "optional": {}
+        },
+        "outputs": {
+            "output_user_comments_vdb": {
+                "type": "VDB",
+                "description": "user comments vdb file"
+            },
+            "output_dish_img_vdb": {
+                "type": "VDB",
+                "description": "dish img vdb file"
+            },
+            "output_shop_img_vdb": {
+                "type": "VDB",
+                "description": "shop img vdb file"
+            }
+        },
+        "category": "Function"
+    }
+}
